@@ -30,7 +30,7 @@ Perfect for **frontend projects**, **APIs**, and **UI components**.
  ┣ 📄 months.json
  ┗ 📄 README.md
 ```
-🧩 Data Example
+## 🧩 Data Example
 
 ```
 months.json
@@ -55,6 +55,44 @@ Just import or fetch months.json and use it in your project.
 fetch("months.json")
   .then(res => res.json())
   .then(data => console.log(data));
+```
+## OR 
+JS
+```
+fetch("https://anurag0dev.github.io/months-json-api/months.json")
+  .then(response => response.json())
+  .then(data => {
+    console.log(data.months); // all months
+  })
+  .catch(error => {
+    console.error("Error fetching months:", error);
+  });
+```
+## Example: Use in Dropdown (JavaScript)
+
+```
+const select = document.getElementById("monthSelect");
+
+fetch("https://anurag0dev.github.io/months-json-api/months.json")
+  .then(res => res.json())
+  .then(data => {
+    data.months.forEach(item => {
+      const option = document.createElement("option");
+      option.value = item.month;
+      option.textContent = item.full;
+      select.appendChild(option);
+    });
+  });
+```
+## Example: React Usage
+
+```
+useEffect(() => {
+  fetch("https://anurag0dev.github.io/months-json-api/months.json")
+    .then(res => res.json())
+    .then(data => setMonths(data.months));
+}, []);
+
 ```
 ## 📜 License
 
