@@ -48,6 +48,11 @@ months.json
 - ✅ React / JavaScript apps
 - ✅ Chrome extensions
 
+## API URL 
+```
+https://cdn.jsdelivr.net/gh/anurag0Dev/months-json-api@main/months.json
+```
+
 ## ⚡ How to Use
 Just import or fetch months.json and use it in your project.
 
@@ -59,7 +64,7 @@ fetch("months.json")
 ## OR 
 JS
 ```
-fetch("https://anurag0dev.github.io/months-json-api/months.json")
+fetch("https://cdn.jsdelivr.net/gh/anurag0Dev/months-json-api@main/months.json")
   .then(response => response.json())
   .then(data => {
     console.log(data.months); // all months
@@ -73,7 +78,7 @@ fetch("https://anurag0dev.github.io/months-json-api/months.json")
 ```
 const select = document.getElementById("monthSelect");
 
-fetch("https://anurag0dev.github.io/months-json-api/months.json")
+fetch("https://cdn.jsdelivr.net/gh/anurag0Dev/months-json-api@main/months.json")
   .then(res => res.json())
   .then(data => {
     data.months.forEach(item => {
@@ -88,7 +93,7 @@ fetch("https://anurag0dev.github.io/months-json-api/months.json")
 
 ```
 useEffect(() => {
-  fetch("https://anurag0dev.github.io/months-json-api/months.json")
+  fetch("https://cdn.jsdelivr.net/gh/anurag0Dev/months-json-api@main/months.json")
     .then(res => res.json())
     .then(data => setMonths(data.months));
 }, []);
